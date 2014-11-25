@@ -1,0 +1,95 @@
+@import 'guardians';
+
+* {
+  font-family: 'guardians';
+}
+
+h1 {
+  font-size: 10em;
+}
+
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.top {
+  background-image: url('http://i.imgur.com/oDJY01G.jpg');
+  color: #fff;
+
+  .header {
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+
+h6:nth-child(2) {
+  font-size: 1em;
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+
+    div {
+      position: absolute;
+      font-size: 1.5em;
+    }
+
+    div::after {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      height: 5px;
+      background-color: #fff;
+      content: "";
+      transition: width .5s;
+    }
+
+    div:hover:after {
+      width: 100%;
+    }
+
+    div:nth-child(2) {
+      right: 13vw;
+      top: 45vh;
+      font-size: 2em;
+      border-bottom: 5px solid #fff;
+    }
+
+    div:nth-child(3) {
+      right: 10vw;
+      top: 85vh;
+    }
+
+    div:nth-child(6) {
+      left: 10vw;
+      top: 85vh;
+    }
+
+    div:nth-child(4) {
+      left: 15vw;
+      top: 45vh;
+      font-size: 2em;
+      border-bottom: 5px solid #fff;
+    }
+
+    div:nth-child(5) {
+      left: 13vw;
+      top: 65vh;
+    }
+
+
+    div:nth-child(7) {
+      right: 15vw;
+      top: 65vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
