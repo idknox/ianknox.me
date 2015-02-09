@@ -12,3 +12,6 @@ gem 'rails_12factor', group: :production
 gem 'pg'
 
 gem 'newrelic_rpm'
+
+gem 'rails_stdout_logging'
+gem 'rails_serve_static_assets'
