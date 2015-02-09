@@ -18,4 +18,10 @@ $(document).ready(function () {
       $('#back-top').show();
     }
   });
+
+  $('#back-top').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('.top').offset().top
+    }, 500);
+  });
 });
