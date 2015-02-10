@@ -10,6 +10,11 @@ class Github
 
   attr_reader :user_data, :repos
 
+  def updated_repos
+    @repos[0..4]
+  end
+
+  private
 
   def get_data
     file = open('https://api.github.com/users/' + @user + '?access_token=' + ENV['GITHUB_ACCESS_TOKEN']) { |f| f.read }
@@ -17,7 +22,19 @@ class Github
   end
 
   def get_repos
-    file = open('https://api.github.com/users/' + @user + '/repos?access_token=' + ENV['GITHUB_ACCESS_TOKEN']) { |f| f.read }
-    JSON.parse(file)
+    all_pages = []
+    (1..4).each do |page_number|
+      file = open(
+        'https://api.github.com/users/' +
+          @user +
+          '/repos' +
+          '?page=' +
+          page_number.to_s +
+          '&sort=updated&access_token=' +
+          ENV['GITHUB_ACCESS_TOKEN']
+      ) { |f| f.read }
+      all_pages += JSON.parse(file)
+    end
+    all_pages
   end
 end

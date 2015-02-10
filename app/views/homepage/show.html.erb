@@ -59,12 +59,21 @@
   </div>
   <div>
   <div>
-    Repos: <%= @github_data.repos%>
+    Recently Updated Repos:
+    <ul>
+    <% @github_data.updated_repos.each do |repo| %>
+      <li><%= repo['name'] %></li>
+      <% end %>
+    </ul>
   </div>
+    <div>
+      Totel Repos:
+      <%= @github_data.user_data['public_repos  '] %>
+    </div>
   </div>
 </section>
-<section class="twitter">
-  <div class="title">
-    <h2>Twitter</h2>
-  </div>
-</section>
+<!--<section class="twitter">-->
+  <!--<div class="title">-->
+    <!--<h2>Twitter</h2>-->
+  <!--</div>-->
+<!--</section>-->
