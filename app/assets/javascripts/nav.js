@@ -39,21 +39,21 @@ $(document).ready(function () {
   $('.content').hide();
 
   $('.project').on('click', function () {
-    if ($(this).width() != $(window).width() * 0.9) {
+    if ($(this).width() != $(window).width() * 0.8) {
       $(this).find('.opener').toggle();
       $(this).animate({
-        width: ($(window).width() * 0.9)
+        width: ($(window).width() * 0.8)
       }, 500);
       $(this).find('.content').toggle();
       $(this).siblings('.project').animate({
-        width: 30
+        width: 100
       }, 500)
         .find('.opener').show();
       $(this).siblings('.project').find('.content').hide();
     }
     else {
       $(this).animate({
-        width: 30
+        width: 100
       }, 500);
       $(this).find('.content').toggle();
       $(this).find('.opener').toggle();
