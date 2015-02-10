@@ -12,12 +12,12 @@ class Github
 
 
   def get_data
-    file = open('https://api.github.com/users/' + @user) { |f| f.read }
+    file = open('https://api.github.com/users/' + @user + '?access_token=' + ENV['GITHUB_ACCESS_TOKEN']) { |f| f.read }
     JSON.parse(file)
   end
 
   def get_repos
-    file = open('https://api.github.com/users/' + @user + '/repos') { |f| f.read }
+    file = open('https://api.github.com/users/' + @user + '/repos?access_token=' + ENV['GITHUB_ACCESS_TOKEN']) { |f| f.read }
     JSON.parse(file)
   end
 end

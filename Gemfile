@@ -16,3 +16,4 @@ gem 'rails_serve_static_assets'
 gem 'newrelic_rpm'
 
 gem 'font-awesome-rails'
+gem 'dotenv-rails', :groups => [:development, :test]
