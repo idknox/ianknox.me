@@ -1,21 +1,32 @@
 $(document).ready(function () {
-  $('#project-button').on('click', function () {
+  $('.project-button').on('click', function () {
     $('html,body').animate({
       scrollTop: $('.projects').offset().top
     }, 500);
   });
 
+  $('.github-button').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('.github').offset().top
+    }, 500);
+  });
+
   if (document.body.scrollTop < window.innerHeight) {
     $('#back-top').hide();
+    $('#quicklinks').hide();
   } else {
     $('#back-top').show();
+    $('#quicklinks').show();
   }
 
   $(window).on('scroll', function () {
     if (document.body.scrollTop < window.innerHeight) {
       $('#back-top').hide();
+      $('#quicklinks').hide();
     } else {
       $('#back-top').show();
+      $('#quicklinks').show();
+
     }
   });
 
