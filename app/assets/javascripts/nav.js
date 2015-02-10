@@ -24,4 +24,28 @@ $(document).ready(function () {
       scrollTop: $('.top').offset().top
     }, 500);
   });
+
+  $('.content').hide();
+
+  $('.project').on('click', function () {
+    if ($(this).width() != $(window).width() * 0.9) {
+      $(this).find('.opener').toggle();
+      $(this).animate({
+        width: ($(window).width() * 0.9)
+      }, 500);
+      $(this).find('.content').toggle();
+      $(this).siblings('.project').animate({
+        width: 30
+      }, 500)
+        .find('.opener').show();
+      $(this).siblings('.project').find('.content').hide();
+    }
+    else {
+      $(this).animate({
+        width: 30
+      }, 500);
+      $(this).find('.content').toggle();
+      $(this).find('.opener').toggle();
+    }
+  })
 });
