@@ -1,9 +1,8 @@
 .github {
-  background-image: url('rr.jpg');
-  background-size: cover;
-  color: #fff;
+  background: $dark-grey;
+  color: $black;
 
-  h2 {
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  .header {
+    border-bottom: 5px solid $black;
   }
 }

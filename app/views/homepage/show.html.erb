@@ -1,79 +1,99 @@
-<section class="top">
-  <div class="header">
-    <h1>Ian Knox</h1>
-
-    <div>
-      <span>Developer</span>
-    </div>
-    <div>
-      <span>Denver CO</span>
-    </div>
-    <div class="project-button">
-      <%= link_to 'Projects', '#' %>
-    </div>
-    <div>
+<div class="menu">
+  <ul>
+    <li>
+      <%= link_to 'Projects', '#', class: 'project-button' %>
+    </li>
+    <li>
       <%= link_to 'Linkedin', 'http://lnkd.in/DiAN7H' %>
-    </div>
-    <div class="github-button">
-      <%= link_to 'Github', '#' %>
-    </div>
-    <div>
+    </li>
+    <li>
+      <%= link_to 'Github', '#', class: 'github-button' %>
+    </li>
+    <li>
       <%= link_to 'Twitter', 'http://www.twitter.com/idknox' %>
+    </li>
+  </ul>
+</div>
+<section class="top">
+  <div class="container-fluid title-container">
+    <div class="row">
+      <div class="col-sm-8 col-md-8 col-md-offset-1 col-centered title">
+        <h1 class="">Ian</h1>
+
+        <h1 class="">Knox</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-1 subtitle">
+        <div class="left">Developer</div>
+        <div class="right">Denver CO</div>
+      </div>
     </div>
   </div>
-  <div id="back-top">back to top</div>
-  <div id="quicklinks">
-    <span>P</span>
-    <%= fa_icon 'github', class: 'github-button' %>
-    <%= fa_icon 'twitter', class: 'twitter-button' %>
-  </div>
+  <!--<div id="back-top">back to top</div>-->
+  <!--<div id="quicklinks">-->
+  <!--<span>P</span>-->
+  <!--<%= fa_icon 'github', class: 'github-button' %>-->
+  <!--<%= fa_icon 'twitter', class: 'twitter-button' %>-->
+  <!--</div>-->
 </section>
 <section class="projects">
-  <div class="title">
-    <h2>Projects</h2>
-  </div>
-  <div class="left project">
-    <div class="content">
-      <h3>Sound Locale</h3>
-
-      <p>coming soon</p>
+  <div class="row">
+    <div class="col-md-offset-1 header">
+      Projects
     </div>
-    <span class="opener"><%= fa_icon 'chevron-right' %></span>
-  </div>
-  <div class="right project">
-    <div class="content">
-      <h3>Rantly</h3>
-
-      <p>Coming soon</p>
+    <div class="col-md-offset-1">
+      Coming Soon
     </div>
-    <span class="opener"><%= fa_icon 'chevron-left' %></span>
   </div>
+
+  <!--<div class="left project">-->
+  <!--<div class="content">-->
+  <!--<h3>Sound Locale</h3>-->
+
+  <!--<p>coming soon</p>-->
+  <!--</div>-->
+  <!--<span class="opener"><%= fa_icon 'chevron-right' %></span>-->
+  <!--</div>-->
+  <!--<div class="right project">-->
+  <!--<div class="content">-->
+  <!--<h3>Rantly</h3>-->
+
+  <!--<p>Coming soon</p>-->
+  <!--</div>-->
+  <!--<span class="opener"><%= fa_icon 'chevron-left' %></span>-->
+  <!--</div>-->
 </section>
 <section class="github">
-  <div class="title">
-    <h2>Github</h2>
-
-    <div class="sub">
-      <h3><%= link_to 'idknox', 'http://www.github.com/idknox' %></h3>
+  <div class="row">
+    <div class="col-md-offset-1 header">
+      Github
+    </div>
+    <div class="col-md-offset-1">
+      Coming Soon
     </div>
   </div>
-  <div>
-  <div>
-    Recently Updated Repos:
-    <ul>
-    <% @github_data.updated_repos.each do |repo| %>
-      <li><%= repo['name'] %></li>
-      <% end %>
-    </ul>
-  </div>
-    <div>
-      Totel Repos:
-      <%= @github_data.user_data['public_repos  '] %>
-    </div>
-  </div>
+  <!--<div>-->
+  <!--<div>-->
+  <!--Recently Updated Repos:-->
+  <!--
+  <% @github_data.updated_repos.each do |repo| %>-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-4 col-md-offset-1">-->
+    <!--<%= repo['name'] %>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--
+  <% end %>-->
+  <!--</div>-->
+  <!--<div>-->
+  <!--Totel Repos:-->
+  <!--<%= @github_data.user_data['public_repos  '] %>-->
+  <!--</div>-->
+  <!--</div>-->
 </section>
 <!--<section class="twitter">-->
-  <!--<div class="title">-->
-    <!--<h2>Twitter</h2>-->
-  <!--</div>-->
+<!--<div class="title">-->
+<!--<h2>Twitter</h2>-->
+<!--</div>-->
 <!--</section>-->

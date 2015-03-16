@@ -1,8 +1,8 @@
 
 
 .projects {
-  background-image: url('gasworks.png');
-  background-size: cover;
+  background: $black;
+  color: $dark-grey;
 
   .left, .right {
     padding: 10px;
