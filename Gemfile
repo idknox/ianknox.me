@@ -18,3 +18,6 @@ gem 'newrelic_rpm'
 
 gem 'font-awesome-rails'
 gem 'dotenv-rails', :groups => [:development, :test]
+group :development do
+  gem 'capistrano-rails', '~> 1.1.1'
+end

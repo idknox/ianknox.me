@@ -23,6 +23,11 @@ h1 {
 
   a {
     color: #EBEBEB;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $light-gray;
   }
 
   ul {
