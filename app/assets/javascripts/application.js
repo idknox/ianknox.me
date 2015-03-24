@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.onscreen
+//= require fancybox
 //= require_tree .

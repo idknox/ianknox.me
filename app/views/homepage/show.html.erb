@@ -2,12 +2,12 @@
   &nbsp;
 </div>
 <div class="menu">
+  <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
+  <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
+  <%= link_to (fa_icon 'github'), '#', class: 'github-button' %>
   <%= link_to '#' do %>
     <i class="projects-button">p</i>
   <% end %>
-  <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
-  <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
-  <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox' %>
 </div>
 <section class="top">
   <div class="container-fluid title-container">
@@ -36,26 +36,89 @@
       Projects
     </div>
   </div>
-  <div class="col-xs-offset-1 col-md-offset-1">
-    Coming Soon
+  <div class="col-xs-offset-1 col-md-offset-1 content">
+    <div class="row">
+      <div class="col-md-5 project">
+        <h2 class="project-title">
+          Telespine
+        </h2>
+
+        <h3>Digital Health App</h3>
+
+        <div class="site">
+          <%= link_to '#' do %>
+            <%= image_tag 'telespine-small.png' %>
+          <% end %>
+        </div>
+        <div class="detail">
+          <ul>
+            <li>Django, Django Rest Framework</li>
+            <li>Angular</li>
+            <li>Opentok</li>
+            <li>FulLCalendar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-5 col-md-offset-1 project">
+        <h2 class="project-title">
+          Rantly
+        </h2>
+
+        <h3>Twitter-like App</h3>
+
+        <div class="site">
+          <%= link_to '#', class: '' do %>
+            <%= image_tag 'rantly-small.png' %>
+          <% end %>
+        </div>
+        <div class="detail">
+          <ul>
+            <li>Rails</li>
+            <li>Custom JS</li>
+            <li>Keen.io Analytics</li>
+            <li><%= link_to 'Pivotal Tracker Specs', 'https://www.pivotaltracker.com/n/projects/1148198' %></li>
+          </ul>
+          <div class="links">
+            <div class="link">
+              <%= link_to (fa_icon 'globe'), 'http://ian-rantly.herokuapp.com' %>
+              <div class="link">
+                <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/rantly' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 project">
+        <h2 class="project-title">
+          Sound Locale
+        </h2>
+
+        <h3>Denver Concert Aggregator</h3>
+
+        <div class="site">
+          <%= link_to '#', class: 'site-image' do %>
+            <%= image_tag 'rantly-small.png' %>
+          <% end %>
+        </div>
+        <div class="detail">
+          <ul>
+            <li>Rails</li>
+            <li>Custom JS</li>
+            <li>Google Maps, Ticketfly, Stubhub</li>
+            <li>Kimono Labs</li>
+          </ul>
+          <div class="links">
+            <div class="link">
+              <%= link_to (fa_icon 'globe'), 'http://www.sound-locale.com' %>
+              <div class="link">
+                <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/sound_locale_rails' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <!--<div class="left project">-->
-  <!--<div class="content">-->
-  <!--<h3>Sound Locale</h3>-->
-
-  <!--<p>coming soon</p>-->
-  <!--</div>-->
-  <!--<span class="opener"><%= fa_icon 'chevron-right' %></span>-->
-  <!--</div>-->
-  <!--<div class="right project">-->
-  <!--<div class="content">-->
-  <!--<h3>Rantly</h3>-->
-
-  <!--<p>Coming soon</p>-->
-  <!--</div>-->
-  <!--<span class="opener"><%= fa_icon 'chevron-left' %></span>-->
-  <!--</div>-->
 </section>
 <section class="github">
   <div class="header">

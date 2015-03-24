@@ -1,14 +1,26 @@
 $(document).ready(function () {
-  $('.project-button').on('click', function () {
+
+  function changeMenu(section) {
+    if (section == 'projects') {
+      $('.menu-border').hide();
+      menu.removeClass('github-menu').addClass('projects-menu').css('z-index', '1002')
+    } else {
+      menu.removeClass('projects-menu').addClass('github-menu');
+    }
+  }
+
+  $('.projects-button').on('click', function () {
     $('html,body').animate({
-      scrollTop: $('.projects').offset().top
+      scrollTop: $('.projects').find('.header').offset().top
     }, 500);
+    changeMenu('projects')
   });
 
   $('.github-button').on('click', function () {
     $('html,body').animate({
       scrollTop: $('.github').offset().top
     }, 500);
+    changeMenu('github')
   });
 
   var menu = $('.menu');
@@ -19,10 +31,10 @@ $(document).ready(function () {
     var g = $('.github').offset().top
     var h = $('.header').height();
 
-    if (w > p && w < g) {
+    if (w >= p && w < g) {
       $('.menu-border').hide();
       menu.removeClass('github-menu').addClass('projects-menu').css('z-index', '1002')
-    } else if (w > g) {
+    } else if (w >= g) {
       menu.removeClass('projects-menu').addClass('github-menu');
     } else {
       $('.menu-border').show();

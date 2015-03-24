@@ -15,7 +15,7 @@ gem 'rails_stdout_logging'
 gem 'rails_serve_static_assets'
 
 gem 'newrelic_rpm'
-
+gem 'fancybox2-rails', '~> 0.2.8'
 gem 'font-awesome-rails'
 gem 'dotenv-rails', :groups => [:development, :test]
 group :development do
