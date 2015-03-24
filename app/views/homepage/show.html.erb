@@ -1,32 +1,29 @@
+<div class="menu-border">
+  &nbsp;
+</div>
 <div class="menu">
-  <ul>
-    <li>
-      <%= link_to 'Projects', '#', class: 'project-button' %>
-    </li>
-    <li>
-      <%= link_to 'Linkedin', 'http://lnkd.in/DiAN7H' %>
-    </li>
-    <li>
-      <%= link_to 'Github', 'http://github.com/idknox' %>
-    </li>
-    <li>
-      <%= link_to 'Twitter', 'http://www.twitter.com/idknox' %>
-    </li>
-  </ul>
+  <%= link_to '#' do %><i class="projects-button">p</i><% end %>
+  <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
+  <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
+  <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox', class: 'github-button' %>
 </div>
 <section class="top">
   <div class="container-fluid title-container">
     <div class="row">
-      <div class="col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-1 col-centered title">
-        <h1 class="">Ian</h1>
+      <div class="col-xs-8 col-md-10 col-md-offset-1">
+        <div class="row">
+          <div class="title col-md-8">
+            <h1 class="">Ian</h1>
 
-        <h1 class="">Knox</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-1 col-md-6 col-md-offset-1 subtitle">
-        <div class="left">Developer</div>
-        <div class="right">Denver CO</div>
+            <h1 class="">Knox</h1>
+          </div>
+          <div class="col-md-3 profile-picture">
+          </div>
+        </div>
+        <div class="row subtitle">
+          <div class="left">Developer</div>
+          <div class="right">Denver CO</div>
+        </div>
       </div>
     </div>
   </div>
@@ -38,13 +35,13 @@
   <!--</div>-->
 </section>
 <section class="projects">
-  <div class="row">
-    <div class="col-sm-offset-1 col-md-offset-1 header">
+  <div class="header">
+    <div class="col-xs-offset-1 col-md-offset-1">
       Projects
     </div>
-    <div class="col-sm-offset-1 col-md-offset-1">
-      Coming Soon
-    </div>
+  </div>
+  <div class="col-xs-offset-1 col-md-offset-1">
+    Coming Soon
   </div>
 
   <!--<div class="left project">-->
@@ -65,13 +62,13 @@
   <!--</div>-->
 </section>
 <section class="github">
-  <div class="row">
-    <div class="col-md-offset-1 header">
+  <div class="header">
+    <div class="col-xs-offset-3 col-md-offset-1">
       Github
     </div>
-    <div class="col-md-offset-1">
-      Coming Soon
-    </div>
+  </div>
+  <div class="col-md-offset-1">
+    Coming Soon
   </div>
   <!--<div>-->
   <!--<div>-->

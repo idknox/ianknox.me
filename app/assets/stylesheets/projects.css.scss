@@ -4,41 +4,8 @@
   background: $black;
   color: $dark-grey;
 
-  .left, .right {
-    padding: 10px;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    top: 10px;
-    height: 55%;
-    width: 100px;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-
-    .opener {
-      position: relative;
-      top: 40%;
-      font-size: 3em;
-      cursor: pointer;
-    }
-
-    h3 {
-      font-size: 2em;
-    }
-  }
-
-  .left {
-    float: left;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-right: 1px solid #fff;
-  }
-
-  .right {
-    float: right;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-left: 1px solid #fff;
+  .header {
+    background: $black;
+    border-bottom: 5px solid $dark-grey;
   }
 }

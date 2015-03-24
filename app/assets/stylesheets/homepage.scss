@@ -1,59 +1,93 @@
 @import 'guardians';
 @import 'reset';
+
 * {
   font-family: 'guardians';
 }
 
 section {
-  height: 100vh;
-
+  height: 140vh;
+  width: 100%;
 }
 
 h1 {
-  font-size: 12em;
+  font-size: 11em;
+}
+
+.menu-border {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  background-color: $dark-yellow;
+  padding: 20px 50px 10px 0;
+  font-size: 5em;
+  width: 55%;
+  box-sizing: border-box;
+  border-bottom: 5px solid $black;
+
 }
 
 .menu {
   position: fixed;
+  z-index: 999;
   right: 0;
-  top: 30%;
-  font-size: 2em;
-  padding: 30px;
-  background: $black;
+  background-color: $dark-yellow;
+  padding: 0px 50px 10px 0;
+  font-size: 6em;
+  width: 45%;
+  box-sizing: border-box;
+  border-bottom: 5px solid $black;
 
   a {
-    color: #EBEBEB;
-    cursor: pointer;
+    color: inherit;
+    margin-left: 50px;
+    float: right;
   }
 
   a:hover {
-    color: $light-gray;
+    text-decoration: none;
+    color: #666;
   }
 
-  ul {
-    list-style: none;
-
-    li {
-      padding-top: 20px;
-    }
+  i {
+    cursor: pointer;
   }
+
+  .projects-button {
+    font-size: .75em;
+  }
+}
+
+.grey {
+  color: $dark-grey;
 }
 
 .top {
   background: $dark-yellow;
   color: #333;
+  height: 120vh;
 
   .title-container {
-    padding-top: 5%;
+    padding-top: 14%;
 
     .title {
-      padding-left: 0;
+      padding: 0;
+
+    }
+    .profile-picture {
+      height: 320px;
+      width: 320px;
+      background-image: url('profile.jpg');
+      background-size: cover;
+      border-radius: 50%;
+      position: relative;
+      top: 40px;
     }
 
     .subtitle {
-      padding: 20px 0 0 0;
-      font-size: 2em;
+      padding: 10px 0 0 0;
       border-top: 20px solid #333;
+      font-size: 2em;
 
       .left {
         float: left;
@@ -67,10 +101,39 @@ h1 {
 }
 
 .header {
-  margin-top: 20px;
-  padding: 0;
+  position: relative;
+  padding: 20px 0 10px 0;
   font-size: 5em;
+  width: 100%;
+  box-sizing: border-box;
+  color: inherit;
+  border-bottom: 5px solid $black;
+  z-index: 1001;
+}
+
+.projects-menu {
   border-bottom: 5px solid $dark-grey;
+  color: $dark-grey;
+  background: $black;
+}
+
+.github-menu {
+  color: $black;
+  background: $dark-grey;
+  border-bottom: 5px solid $black;
+
+}
+
+.header.stuck {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1001;
+}
+
+.header.stuck.absolute {
+  position: absolute;
 }
 
 

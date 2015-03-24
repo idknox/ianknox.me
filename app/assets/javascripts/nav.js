@@ -11,52 +11,80 @@ $(document).ready(function () {
     }, 500);
   });
 
-  if (document.body.scrollTop < window.innerHeight) {
-    $('#back-top').hide();
-    $('#quicklinks').hide();
-  } else {
-    $('#back-top').show();
-    $('#quicklinks').show();
+  var menu = $('.menu');
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > $('.projects').offset().top
+      && $(window).scrollTop() < $('.github').offset().top) {
+      $('.menu-border').hide();
+      menu.removeClass('github-menu').addClass('projects-menu').css('z-index', '1002')
+    } else if ($(window).scrollTop() > $('.github').offset().top) {
+      menu.removeClass('projects-menu').addClass('github-menu');
+    } else if ($(window).scrollTop() > $('.github').offset().top
+      && $(window).scrollTop() < $('.github').offset().top - $('.header')[0].height()) {
+
+      menu.css('z-index', '999')
+    } else {
+      $('.menu-border').show();
+      menu.removeClass('projects-menu').css('z-index', '999');
+    }
+  });
+
+// STICK MENU //
+
+  function stickyTitles(stickies) {
+
+    var thisObj = this;
+
+    thisObj.load = function () {
+
+      stickies.each(function () {
+
+        var thisSticky = $(this).wrap('<div class="followWrap" />');
+        thisSticky.parent().height(thisSticky.outerHeight());
+
+        $.data(thisSticky[0], 'pos', thisSticky.offset().top);
+
+      });
+
+      $(window).off("scroll.stickies").on("scroll.stickies", function () {
+
+        thisObj.scroll();
+
+      });
+    };
+
+    thisObj.scroll = function () {
+
+      stickies.each(function (i) {
+
+        var thisSticky = jQuery(this),
+          nextSticky = stickies.eq(i + 1),
+          prevSticky = stickies.eq(i - 1),
+          pos = $.data(thisSticky[0], 'pos');
+
+        if (pos <= jQuery(window).scrollTop()) {
+
+          thisSticky.addClass("stuck");
+
+          if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
+
+            thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
+          }
+
+        } else {
+
+          thisSticky.removeClass("stuck");
+
+          if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos') - prevSticky.outerHeight()) {
+
+            prevSticky.removeClass("absolute").removeAttr("style");
+          }
+        }
+      });
+    }
   }
 
-  $(window).on('scroll', function () {
-    if (document.body.scrollTop < window.innerHeight) {
-      $('#back-top').hide();
-      $('#quicklinks').hide();
-    } else {
-      $('#back-top').show();
-      $('#quicklinks').show();
+  new stickyTitles($(".header")).load();
 
-    }
-  });
-
-  $('#back-top').on('click', function () {
-    $('html,body').animate({
-      scrollTop: $('.top').offset().top
-    }, 500);
-  });
-
-  $('.content').hide();
-
-  $('.project').on('click', function () {
-    if ($(this).width() != $(window).width() * 0.8) {
-      $(this).find('.opener').toggle();
-      $(this).animate({
-        width: ($(window).width() * 0.8)
-      }, 500);
-      $(this).find('.content').toggle();
-      $(this).siblings('.project').animate({
-        width: 100
-      }, 500)
-        .find('.opener').show();
-      $(this).siblings('.project').find('.content').hide();
-    }
-    else {
-      $(this).animate({
-        width: 100
-      }, 500);
-      $(this).find('.content').toggle();
-      $(this).find('.opener').toggle();
-    }
-  })
 });
