@@ -14,23 +14,23 @@ $(document).ready(function () {
   var menu = $('.menu');
 
   $(window).scroll(function () {
-    if ($(window).scrollTop() > $('.projects').offset().top
-      && $(window).scrollTop() < $('.github').offset().top) {
+    var w = $(window).scrollTop();
+    var p = $('.projects').offset().top;
+    var g = $('.github').offset().top
+    var h = $('.header').height();
+
+    if (w > p && w < g) {
       $('.menu-border').hide();
       menu.removeClass('github-menu').addClass('projects-menu').css('z-index', '1002')
-    } else if ($(window).scrollTop() > $('.github').offset().top) {
+    } else if (w > g) {
       menu.removeClass('projects-menu').addClass('github-menu');
-    } else if ($(window).scrollTop() > $('.github').offset().top
-      && $(window).scrollTop() < $('.github').offset().top - $('.header')[0].height()) {
-
-      menu.css('z-index', '999')
     } else {
       $('.menu-border').show();
       menu.removeClass('projects-menu').css('z-index', '999');
     }
   });
 
-// STICK MENU //
+// STICKY MENU //
 
   function stickyTitles(stickies) {
 
