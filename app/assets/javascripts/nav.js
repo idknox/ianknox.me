@@ -12,81 +12,35 @@ $(document).ready(function () {
     }, 500);
   });
 
-  var menu = $('.menu');
 
-  //  $(window).scroll(function () {
-  //    var w = $(window).scrollTop();
-  //    var p = $('.projects').offset().top;
-  //    var g = $('.github').offset().top;
-  //    var h = $('.header').height();
-  //    var a = $('.about').offset().top;
-  //
-  //    if (w >= p && w < g) {
-  //      $('.menu-border').hide();
-  //      menu.removeClass('github-menu').addClass('projects-menu').css('z-index', '1002')
-  //    } else if (w >= g && w < a) {
-  //      menu.removeClass('projects-menu').addClass('github-menu');
-  //    } else {
-  //      $('.menu-border').show();
-  //      menu.removeClass('projects-menu').removeClass('github-menu').css('z-index', '1002');
-  //    }
-  //  });
+  $('.content').hide();
+  $('.close-button').hide();
 
-// STICKY MENU //
+  function closeBox(el) {
+    el.slideUp();
+    el.siblings('.header').find('.close-button').hide();
+    el.siblings('.header').find('.open-button').show();
+  }
 
-//  function stickyTitles(stickies) {
-//
-//    var thisObj = this;
-//
-//    thisObj.load = function () {
-//
-//      stickies.each(function () {
-//
-//        var thisSticky = $(this).wrap('<div class="followWrap" />');
-//        thisSticky.parent().height(thisSticky.outerHeight());
-//
-//        $.data(thisSticky[0], 'pos', thisSticky.offset().top);
-//
-//      });
-//
-//      $(window).off("scroll.stickies").on("scroll.stickies", function () {
-//
-//        thisObj.scroll();
-//
-//      });
-//    };
-//
-//    thisObj.scroll = function () {
-//
-//      stickies.each(function (i) {
-//
-//        var thisSticky = jQuery(this),
-//          nextSticky = stickies.eq(i + 1),
-//          prevSticky = stickies.eq(i - 1),
-//          pos = $.data(thisSticky[0], 'pos');
-//
-//        if (pos <= jQuery(window).scrollTop()) {
-//
-//          thisSticky.addClass("stuck");
-//
-//          if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
-//
-//            thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
-//          }
-//
-//        } else {
-//
-//          thisSticky.removeClass("stuck");
-//
-//          if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos') - prevSticky.outerHeight()) {
-//
-//            prevSticky.removeClass("absolute").removeAttr("style");
-//          }
-//        }
-//      });
-//    }
-//  }
-//
-//  new stickyTitles($(".header")).load();
+  function openBox(el) {
+    el.slideDown();
+    el.siblings('.header').find('.close-button').show();
+    el.siblings('.header').find('.open-button').hide();
+  }
+
+  function isHidden(el) {
+    var display = el.css('display');
+    return (display === 'none')
+  }
+
+  $('.header').click(function () {
+
+    if (isHidden($(this).siblings('.content'))) {
+      openBox($(this).siblings('.content'));
+      closeBox($(this).parent().siblings('section').find('.content'));
+    } else {
+      closeBox($(this).siblings('.content'));
+    }
+  });
 
 });

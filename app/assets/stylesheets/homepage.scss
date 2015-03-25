@@ -128,6 +128,11 @@ a {
   width: 100%;
   box-sizing: border-box;
   color: inherit;
+  cursor: pointer;
+
+  .open-button, .close-button {
+    font-size: .75em;
+  }
 
   @media (max-width: $iphone) {
     display: none;
