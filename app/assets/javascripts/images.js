@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $(".site-image").click(function () {
+  $(".sl-gallery").click(function () {
     $.fancybox([
       {
         'href': '/assets/sl-1.png',
@@ -28,5 +28,23 @@ $(document).ready(function () {
     });
   });
 
-  console.log($(window).width())
+  $(".r-gallery").click(function () {
+    $.fancybox([
+      {
+        'href': '/assets/r-1.png',
+        'title': 'Dashboard'
+      },
+      {
+        'href': '/assets/r-2.png',
+        'title': 'View Rant'
+      },
+      {
+        'href': '/assets/r-3.png',
+        'title': 'Follow Users'
+      }
+    ], {
+      'titlePosition': 'inside',
+      'overlayOpacity': '0.3'
+    });
+  });
 });

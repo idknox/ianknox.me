@@ -25,13 +25,13 @@
       .site {
         overflow: hidden;
         max-width: 100%;
-        max-height: 200px;
+        height: 180px;
         margin: 20px 0 20px 0;
         border: 1px solid $dark-grey;
 
         img {
-          width: 200px;
-          height: 100px;
+          width: 100%;
+          height: auto;
           cursor: -moz-zoom-in;
           cursor: -webkit-zoom-in;
         }
