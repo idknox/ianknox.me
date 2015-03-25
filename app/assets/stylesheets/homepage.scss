@@ -21,11 +21,11 @@ a {
   cursor: pointer;
   color: inherit;
   text-decoration: none;
-}
 
-a:hover {
-  text-decoration: none;
-  color: #666;
+  &:hover {
+    text-decoration: none;
+    color: $dark-yellow;
+  }
 }
 
 .menu-border {
@@ -48,7 +48,7 @@ a:hover {
   background-color: $dark-yellow;
   padding: 0px 50px 10px 0;
   font-size: 4em;
-  width: 45%;
+  width: 50%;
   box-sizing: border-box;
   border-bottom: 5px solid $black;
 
@@ -57,12 +57,15 @@ a:hover {
     padding: 0;
   }
 
+  .about-button {
+    font-size: 1em;
+  }
+
   a {
-    color: inherit;
     margin-left: 50px;
     float: right;
 
-    a:hover {
+    &:hover {
       color: #666;
     }
 
@@ -76,8 +79,19 @@ a:hover {
     cursor: pointer;
   }
 
-  .projects-button {
+  .projects-button, .about-button {
+    position: relative;
+    top: 2px;
     font-size: .75em;
+
+    .projects-text {
+      font-size: .2em;
+      margin-left: -25px;
+    }
+
+    .about-text {
+      font-size: .2em;
+    }
   }
 }
 
@@ -147,6 +161,10 @@ a:hover {
   border-bottom: 5px solid $dark-grey;
   color: $dark-grey;
   background: $black;
+
+  a:hover {
+    color: $dark-yellow;
+  }
 }
 
 .github-menu {
@@ -154,6 +172,9 @@ a:hover {
   background: $dark-grey;
   border-bottom: 5px solid $black;
 
+  a:hover {
+    color: $dark-yellow;
+  }
 }
 
 .stuck {
@@ -166,67 +187,4 @@ a:hover {
 
 .stuck.absolute {
   position: absolute;
-}
-
-.content {
-
-  .project {
-    margin-top: 100px;
-    text-align: center;
-    height: 520px;
-
-    .project-title {
-      margin: 0;
-    }
-
-    h3 {
-      font-size: 1em;
-      margin: 5px 0 0 0;
-    }
-
-    .site {
-      overflow: hidden;
-      max-width: 100%;
-      max-height: 300px;
-      margin: 20px 0 20px 0;
-      border: 1px solid $dark-grey;
-
-      img {
-        max-width: 100%;
-        max-height: 100%;
-        cursor: -moz-zoom-in;
-        cursor: -webkit-zoom-in;
-      }
-    }
-
-    .detail {
-
-      .links {
-        float: right;
-        position: relative;
-        top: -160px;
-        font-size: 4em;
-        width: 20%;
-
-        .link {
-          margin-bottom: 10px;
-        }
-
-        .link-label {
-          font-size: .2em;
-          margin-right: 5px;
-        }
-      }
-
-      ul {
-        text-align: left;
-        width: 60%;
-        margin-left: 20px;
-
-        li {
-          padding: 5px;
-        }
-      }
-    }
-  }
 }

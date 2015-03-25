@@ -2,12 +2,15 @@
   &nbsp;
 </div>
 <div class="menu">
+  <%= link_to '#' do %>
+    <i class="about-button">a<span class="about-text">bout</span></i>
+  <% end %>
+  <%= link_to '#' do %>
+    <i class="projects-button">p<span class="projects-text">rojects</span></i>
+  <% end %>
   <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
   <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
   <%= link_to (fa_icon 'github'), '#', class: 'github-button' %>
-  <%= link_to '#' do %>
-    <i class="projects-button">p</i>
-  <% end %>
 </div>
 <section class="top">
   <div class="container-fluid title-container">
@@ -129,6 +132,17 @@
   <div class="col-md-offset-1">
     Coming Soon
   </div>
+</section>
+<section class="about">
+  <div class="header">
+    <div class="col-xs-offset-3 col-md-offset-1">
+      About
+    </div>
+  </div>
+  <div class="col-md-offset-1">
+    Coming Soon
+  </div>
+</section>
   <!--<div>-->
   <!--<div>-->
   <!--Recently Updated Repos:-->
@@ -147,7 +161,6 @@
   <!--<%= @github_data.user_data['public_repos  '] %>-->
   <!--</div>-->
   <!--</div>-->
-</section>
 <!--<section class="twitter">-->
 <!--<div class="title">-->
 <!--<h2>Twitter</h2>-->

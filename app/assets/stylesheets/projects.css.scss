@@ -1,5 +1,4 @@
 
-
 .projects {
   background: $black;
   color: $dark-grey;
@@ -7,5 +6,68 @@
   .header {
     background: $black;
     border-bottom: 5px solid $dark-grey;
+  }
+
+  .content {
+
+    .project {
+      margin-top: 100px;
+      text-align: center;
+      height: 520px;
+
+      .project-title {
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 1em;
+        margin: 5px 0 0 0;
+      }
+
+      .site {
+        overflow: hidden;
+        max-width: 100%;
+        max-height: 300px;
+        margin: 20px 0 20px 0;
+        border: 1px solid $dark-grey;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          cursor: -moz-zoom-in;
+          cursor: -webkit-zoom-in;
+        }
+      }
+
+      .detail {
+
+        .links {
+          float: right;
+          position: relative;
+          top: -160px;
+          font-size: 4em;
+          width: 20%;
+
+          .link {
+            margin-bottom: 10px;
+          }
+
+          .link-label {
+            font-size: .2em;
+            margin-right: 5px;
+          }
+        }
+
+        ul {
+          text-align: left;
+          width: 60%;
+          margin-left: 20px;
+
+          li {
+            padding: 5px;
+          }
+        }
+      }
+    }
   }
 }
