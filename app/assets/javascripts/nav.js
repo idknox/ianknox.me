@@ -25,23 +25,23 @@ $(document).ready(function () {
 
   var menu = $('.menu');
 
-  $(window).scroll(function () {
-    var w = $(window).scrollTop();
-    var p = $('.projects').offset().top;
-    var g = $('.github').offset().top;
-    var h = $('.header').height();
-    var a = $('.about').offset().top;
-
-    if (w >= p && w < g) {
-      $('.menu-border').hide();
-      menu.removeClass('github-menu').addClass('projects-menu').css('z-index', '1002')
-    } else if (w >= g && w < a) {
-      menu.removeClass('projects-menu').addClass('github-menu');
-    } else {
-      $('.menu-border').show();
-      menu.removeClass('projects-menu').removeClass('github-menu').css('z-index', '1002');
-    }
-  });
+  //  $(window).scroll(function () {
+  //    var w = $(window).scrollTop();
+  //    var p = $('.projects').offset().top;
+  //    var g = $('.github').offset().top;
+  //    var h = $('.header').height();
+  //    var a = $('.about').offset().top;
+  //
+  //    if (w >= p && w < g) {
+  //      $('.menu-border').hide();
+  //      menu.removeClass('github-menu').addClass('projects-menu').css('z-index', '1002')
+  //    } else if (w >= g && w < a) {
+  //      menu.removeClass('projects-menu').addClass('github-menu');
+  //    } else {
+  //      $('.menu-border').show();
+  //      menu.removeClass('projects-menu').removeClass('github-menu').css('z-index', '1002');
+  //    }
+  //  });
 
 // STICKY MENU //
 
