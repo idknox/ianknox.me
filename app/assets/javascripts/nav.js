@@ -10,10 +10,10 @@ $(document).ready(function () {
   }
 
   $('.projects-button').on('click', function () {
+    changeMenu('projects')
     $('html,body').animate({
       scrollTop: $('.projects').find('.header').offset().top
     }, 500);
-    changeMenu('projects')
   });
 
   $('.github-button').on('click', function () {
@@ -39,7 +39,7 @@ $(document).ready(function () {
       menu.removeClass('projects-menu').addClass('github-menu');
     } else {
       $('.menu-border').show();
-      menu.removeClass('projects-menu').removeClass('github-menu').css('z-index', '10001');
+      menu.removeClass('projects-menu').removeClass('github-menu').css('z-index', '1002');
     }
   });
 
