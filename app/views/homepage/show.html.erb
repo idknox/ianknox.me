@@ -1,21 +1,14 @@
-<div class="hidden-xs menu-border">
-  &nbsp;
-</div>
 <div class="menu">
-  <%= link_to '#' do %>
-    <i class="about-button">a<span class="about-text">bout</span></i>
-  <% end %>
-  <%= link_to '#' do %>
-    <i class="projects-button">p<span class="projects-text">rojects</span></i>
-  <% end %>
-  <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
-  <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
-  <%= link_to (fa_icon 'github'), '#', class: 'github-button' %>
+  <div class="col-md-offset-2 col-md-10">
+    <%= link_to (fa_icon 'github'), '#', class: 'github-button' %>
+    <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
+    <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
+  </div>
 </div>
 <section class="top">
   <div class="container-fluid title-container">
     <div class="row ">
-      <div class=" col-xs-offset-1 col-xs-8 col-md-10 col-md-offset-1">
+      <div class=" col-xs-offset-1 col-xs-8 col-md-8 col-md-offset-2">
         <div class="row">
           <div class="title col-md-8">
             <h1 class="">Ian</h1>
@@ -25,9 +18,11 @@
           <div class="col-md-3 profile-picture">
           </div>
         </div>
-        <div class="row subtitle">
-          <div class="left">Developer</div>
-          <div class="right">Denver CO</div>
+        <div class="subtitle">
+          <h2>
+            <div class="left">Developer</div>
+            <div class="right">Denver CO</div>
+          </h2>
         </div>
       </div>
     </div>
@@ -35,63 +30,13 @@
 </section>
 <section class="projects">
   <div class="header">
-    <div class="col-xs-offset-1 col-md-offset-1">
+    <div class="col-xs-offset-1 col-md-offset-2">
       Projects
     </div>
   </div>
-  <div class="col-xs-offset-1 col-md-offset-1 content">
+  <div class="col-xs-offset-1 col-md-offset-2 content">
     <div class="row">
-      <div class="col-xs-11 col-md-5 project">
-        <h2 class="project-title">
-          Telespine
-        </h2>
-
-        <h3>Digital Health App</h3>
-
-        <div class="site">
-          <%= link_to '#' do %>
-            <%= image_tag 'telespine-small.png' %>
-          <% end %>
-        </div>
-        <div class="detail">
-          <ul>
-            <li>Django, Django Rest Framework</li>
-            <li>Angular</li>
-            <li>Opentok</li>
-            <li>FullCalendar</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-xs-11 col-md-5 col-md-offset-1 project">
-        <h2 class="project-title">
-          Rantly
-        </h2>
-
-        <h3>Twitter-like App</h3>
-
-        <div class="site">
-          <%= link_to '#', class: '' do %>
-            <%= image_tag 'rantly-small.png' %>
-          <% end %>
-        </div>
-        <div class="detail">
-          <ul>
-            <li>Rails</li>
-            <li>Custom JS</li>
-            <li>Keen.io Analytics</li>
-            <li><%= link_to 'Pivotal Tracker Specs', 'https://www.pivotaltracker.com/n/projects/1148198' %></li>
-          </ul>
-          <div class="links">
-            <div class="link">
-              <%= link_to (fa_icon 'globe'), 'http://ian-rantly.herokuapp.com' %>
-              <div class="link">
-                <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/rantly' %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-11 col-md-5 project">
+      <div class="col-xs-11 col-md-4 project">
         <h2 class="project-title">
           Sound Locale
         </h2>
@@ -120,26 +65,55 @@
           </div>
         </div>
       </div>
+      <div class="col-xs-11 col-md-4 col-md-offset-2 project">
+        <h2 class="project-title">
+          Rantly
+        </h2>
+
+        <h3>Twitter-like App</h3>
+
+        <div class="site">
+          <%= link_to '#', class: '' do %>
+            <%= image_tag 'rantly-small.png' %>
+          <% end %>
+        </div>
+        <div class="detail">
+          <ul>
+            <li>Rails</li>
+            <li>Custom JS</li>
+            <li>Keen.io Analytics</li>
+            <li><%= link_to 'Pivotal Tracker Specs', 'https://www.pivotaltracker.com/n/projects/1148198' %></li>
+          </ul>
+          <div class="links">
+            <div class="link">
+              <%= link_to (fa_icon 'globe'), 'http://ian-rantly.herokuapp.com' %>
+              <div class="link">
+                <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/rantly' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 <section class="github">
   <div class="header">
-    <div class="col-xs-offset-3 col-md-offset-1">
+    <div class="col-xs-offset-3 col-md-offset-2">
       Github
     </div>
   </div>
-  <div class="col-md-offset-1">
+  <div class="col-md-offset-2">
     Coming Soon
   </div>
 </section>
 <section class="about">
   <div class="header">
-    <div class="col-xs-offset-3 col-md-offset-1">
+    <div class="col-xs-offset-3 col-md-offset-2">
       About
     </div>
   </div>
-  <div class="col-md-offset-1">
+  <div class="col-md-offset-2">
     Coming Soon
   </div>
 </section>
