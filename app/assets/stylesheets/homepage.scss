@@ -54,7 +54,9 @@ a {
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 0;
+    padding: 0 0 0 10%;
+    height: 120px;
+    font-size: 5em;
   }
 
   .about-button {
@@ -71,7 +73,7 @@ a {
 
     @media (max-width: 768px) {
       float: none;
-      margin-left: 30px;
+      margin-left: -20px;
     }
   }
 
