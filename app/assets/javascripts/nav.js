@@ -7,6 +7,7 @@ $(document).ready(function () {
   });
 
   $('.github-button').on('click', function () {
+    openBox($('.github > .content'))
     $('html,body').animate({
       scrollTop: $('.github').offset().top
     }, 500);
