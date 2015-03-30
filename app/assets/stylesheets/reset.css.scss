@@ -5,6 +5,15 @@
   color: $black;
 }
 
+h1, h2 {
+  cursor: default;
+}
+
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
 
 
 
