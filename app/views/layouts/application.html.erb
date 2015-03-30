@@ -13,42 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 </head>
 <body>
-<nav class="navbar navbar-default nav-custom">
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="col-xs-8 col-sm-8 col-sm-offset-3 col-md-8 col-md-offset-2 menu">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li>
-              <%= link_to (fa_icon 'laptop'), '', class: 'projects-button' %>
-            </li>
-            <li>
-              <%= link_to (fa_icon 'github'), '', class: 'github-button' %>
-            </li>
-            <li>
-              <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
-            </li>
-            <li>
-              <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
-            </li>
-            <li>
-              <%= link_to (fa_icon 'envelope'), 'mailto:knoxid@gmail.com' %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+  <%= render partial: 'layouts/nav' %>
 <%= yield %>
 </body>
 </html>
