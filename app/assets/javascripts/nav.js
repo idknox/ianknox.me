@@ -1,17 +1,23 @@
 $(document).ready(function () {
+  var menuHeight = $('.nav-custom').height();
 
   // SCROLL //
 
   $('.projects-button').on('click', function () {
+    $(this).siblings('section').find('.content').slideUp();
+
     $('html,body').animate({
-      scrollTop: $('.projects').find('.header').offset().top
+      scrollTop: $('.projects').offset().top - menuHeight
     }, 500);
+    $('.projects').find('.content').slideDown();
   });
 
   $('.github-button').on('click', function () {
+    $(this).siblings('section').find('.content').slideUp();
     $('html,body').animate({
-      scrollTop: $('.github').offset().top
+      scrollTop: $('.github').offset().top - menuHeight
     }, 500);
+    $('.github').find('.content').slideDown();
   });
 
 // ACCORDION //
@@ -22,7 +28,6 @@ $(document).ready(function () {
   }
 
   $('.content').hide();
-  var menuHeight = $('.nav-custom').height();
 
   $('.header-click').click(function () {
 

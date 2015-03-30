@@ -3,6 +3,15 @@
   .stats {
     text-align: center;
     height: 200px;
+
+    i {
+     font-size: 3em;
+
+    &:hover {
+      text-decoration: none;
+      color: $dark-yellow;
+    }
+    }
   }
 
   .loading {

@@ -12,10 +12,8 @@ $(document).ready(function () {
 
   }
 
-  $('.github').find('.header-click').on('click', function () {
-    var promise = $.getJSON('/chart.json');
-    promise.success(displayChart)
-  })
+  var promise = $.getJSON('/chart.json');
+  promise.success(displayChart)
 });
 
 
