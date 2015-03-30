@@ -1,40 +1,27 @@
-require "open-uri"
+require 'octokit'
 
 class Github
 
   def initialize(user)
-    @user = user
-    @user_data = get_data
-    @repos = get_repos
+    client = Octokit::Client.new(:access_token => ENV['GITHUB_ACCESS_TOKEN'])
+    @user = client.user user
   end
 
-  attr_reader :user_data, :repos
+  attr_reader :user, :repos, :language_lists
 
-  def updated_repos
-    @repos[0..4]
+  def repos
+    @user.rels[:repos].get.data
   end
 
-  private
+  def languages
+    language_lists = repos.map { |repo| repo.rels[:languages].get.data }
+    languages = {}
 
-  def get_data
-    file = open('https://api.github.com/users/' + @user + '?access_token=' + ENV['GITHUB_ACCESS_TOKEN']) { |f| f.read }
-    JSON.parse(file)
-  end
-
-  def get_repos
-    all_pages = []
-    (1..4).each do |page_number|
-      file = open(
-        'https://api.github.com/users/' +
-          @user +
-          '/repos' +
-          '?page=' +
-          page_number.to_s +
-          '&sort=updated&access_token=' +
-          ENV['GITHUB_ACCESS_TOKEN']
-      ) { |f| f.read }
-      all_pages += JSON.parse(file)
+    language_lists.each do |list|
+      languages = languages.merge(list) { |k, old, new| old+new }
     end
-    all_pages
+    sums = languages.values.reduce(:+)
+    languages.each { |k, v| languages[k] = ((v/sums.to_f)*100).round(2) }
+    languages.to_a
   end
 end

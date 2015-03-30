@@ -6,9 +6,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'firasans';
+@import 'variables';
+@import 'reset';
+
+@import 'nav';
 @import 'layout';
 @import 'homepage';
 @import 'projects';
 @import 'github';
 @import 'about';
-

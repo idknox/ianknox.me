@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.5'
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'sass-rails', '>= 3.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -13,6 +12,11 @@ gem 'rails_12factor', group: :production
 gem 'pg'
 gem 'rails_stdout_logging'
 gem 'rails_serve_static_assets'
+gem 'octokit', '~> 3.0'
+
+gem 'sass-rails'
+gem 'autoprefixer-rails'
+gem 'highcharts-rails', '~> 4.1.4'
 
 gem 'newrelic_rpm'
 gem 'fancybox2-rails', '~> 0.2.8'

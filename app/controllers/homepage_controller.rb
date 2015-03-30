@@ -1,8 +1,9 @@
 class HomepageController < ApplicationController
   def show
-    @github_data = Github.new('idknox')
+    @github = Github.new('idknox')
   end
 
-  def index
+  def github_chart
+    render json: Github.new('idknox').languages
   end
 end

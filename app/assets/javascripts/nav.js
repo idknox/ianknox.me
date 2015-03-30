@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  // SCROLL //
+
   $('.projects-button').on('click', function () {
     $('html,body').animate({
       scrollTop: $('.projects').find('.header').offset().top
@@ -13,9 +15,10 @@ $(document).ready(function () {
     }, 500);
   });
 
+// ACCORDION //
 
-  $('.content').hide();
   $('.close-button').hide();
+  $('.content').hide();
 
   function closeBox(el) {
     el.slideUp();

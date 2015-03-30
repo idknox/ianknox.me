@@ -1,0 +1,27 @@
+.nav-custom {
+  margin: 0;
+  height: 16%;
+  background: $dark-yellow;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid $black;
+  border-top: 1px solid $dark-yellow;
+  z-index: 999;
+
+  @media (max-width: 765px) {
+    height: 60px;
+  }
+
+  .navbar-collapse {
+    padding: 0;
+  }
+
+  .menu {
+    padding: 0;
+
+    a {
+      padding-left: 0;
+      font-size: 5em;
+    }
+  }
+}

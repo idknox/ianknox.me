@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   root 'homepage#show'
-  get '/homepage' => 'homepage#index'
+
+  get '/chart' => 'homepage#github_chart', as: :github_chart
 end
