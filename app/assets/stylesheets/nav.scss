@@ -1,6 +1,6 @@
 .nav-custom {
   margin: 0;
-  height: 16%;
+  height: 11%;
   background: $dark-yellow;
   position: fixed;
   width: 100%;
@@ -21,7 +21,8 @@
 
     a {
       padding-left: 0;
-      font-size: 5em;
+      font-size: 3em;
+      margin-right: 2vw;
     }
   }
 }

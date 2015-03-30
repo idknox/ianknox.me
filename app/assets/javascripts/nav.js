@@ -17,34 +17,26 @@ $(document).ready(function () {
 
 // ACCORDION //
 
-  $('.close-button').hide();
   $('.content').hide();
-
-  function closeBox(el) {
-    el.slideUp();
-    el.siblings('.header').find('.close-button').hide();
-    el.siblings('.header').find('.open-button').show();
-  }
-
-  function openBox(el) {
-    el.slideDown();
-    el.siblings('.header').find('.close-button').show();
-    el.siblings('.header').find('.open-button').hide();
-  }
+  var menuHeight = $('.nav-custom').height();
 
   function isHidden(el) {
     var display = el.css('display');
     return (display === 'none')
   }
 
-  $('.header').click(function () {
+  $('.header-click').click(function () {
 
     if (isHidden($(this).siblings('.content'))) {
-      openBox($(this).siblings('.content'));
-      closeBox($(this).parent().siblings('section').find('.content'));
+      $(this).siblings('.content').slideDown();
+      $(this).parents('section').siblings('section').find('.content').slideUp();
+      $('html,body').animate({
+        scrollTop: $(this).offset().top - menuHeight
+      }, 500);
     } else {
-      closeBox($(this).siblings('.content'));
+      $(this).siblings('.content').slideUp();
     }
+
   });
 
 });
