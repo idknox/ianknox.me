@@ -17,13 +17,13 @@ $(document).ready(function () {
 
 // ACCORDION //
 
-  $('.content').hide();
-  var menuHeight = $('.nav-custom').height();
-
   function isHidden(el) {
     var display = el.css('display');
     return (display === 'none')
   }
+
+  $('.content').hide();
+  var menuHeight = $('.nav-custom').height();
 
   $('.header-click').click(function () {
 

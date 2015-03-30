@@ -12,11 +12,24 @@
     <div class="row content">
       <div class="col-md-8 col-md-offset-2">
         <div class="row">
-          <%= @github.user.login %>
-          <%= @github.user.followers %> followers
-          <%= @github.user.following %> following
-          <%= @github.user.public_repos %> pub repos
-          joined on <%= @github.user.created_at %>
+          <div class="col-md-4 stats">
+            <div>
+              <b><%= @github.user.followers %></b> followers ·
+              <b><%= @github.user.following %></b> following
+            </div>
+            <div>
+              <b><%= @github.user.public_repos %></b> public repos ·
+              <b><%= @github.user.public_gists %></b> public gist
+            </div>
+            <div>
+              Joined Github on <%= formatted_date(@github.user.created_at) %>
+            </div>
+          </div>
+          <div class="col-md-4 graph-language">
+        <div id="graph"></div>
+            <div class="loading"><%= fa_icon 'cog', class: 'fa-spin' %></div>
+          </div>
+          <div class="col-md-4 loading"><%= fa_icon 'cog', class: 'fa-spin' %></div>
         </div>
       </div>
     </div>

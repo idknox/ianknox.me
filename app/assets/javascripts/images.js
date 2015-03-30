@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $(".sl-gallery").click(function () {
+  $("#sl-gallery").click(function () {
     $.fancybox([
       {
         'href': '/assets/sl-1.png',
@@ -24,7 +24,12 @@ $(document).ready(function () {
       }
     ], {
       'titlePosition': 'inside',
-      'overlayOpacity': '0.3'
+      'overlayOpacity': '0.3',
+      helpers: {
+        overlay: {
+          locked: false
+        }
+      }
     });
   });
 
@@ -44,7 +49,7 @@ $(document).ready(function () {
       }
     ], {
       'titlePosition': 'inside',
-      'overlayOpacity': '0.3'
+      'overlayOpacity': 0.3
     });
   });
 });

@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require fancybox
 //= require highcharts
 //= require highcharts/highcharts-more
+//= require fancybox
 //= require_tree .
