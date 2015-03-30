@@ -1,0 +1,81 @@
+<section class="projects">
+  <div class="container-fluid">
+    <div class="row header-click">
+      <div class="col-md-8 col-md-offset-2 header">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            Projects
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+          <div class="col-md-5 project">
+            <h1 class="project-title">Sound Locale</h1>
+
+            <h3 class="project-subtitle">Denver Concert Aggregator</h3>
+
+            <div class="site">
+              <%= link_to '#', class: 'sl-gallery' do %>
+                <%= image_tag 'sl-1.png' %>
+              <% end %>
+            </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-xs-10 col-md-10 details">
+                  <ul>
+                    <li>Rails</li>
+                    <li>Custom JS</li>
+                    <li>Google Maps, Ticketfly, Stubhub</li>
+                    <li>Kimono Labs</li>
+                  </ul>
+                </div>
+                <div class="col-xs-2 col-md-2 links">
+                  <div class="link">
+                    <%= link_to (fa_icon 'globe'), 'http://www.sound-locale.com' %>
+                  </div>
+                  <div class="link">
+                    <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/sound_locale_rails' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-md-offset-2 project">
+            <h1 class="project-title">Rantly</h1>
+
+            <h3>Twitter-like App</h3>
+
+            <div class="site">
+              <%= link_to '#', class: 'r-gallery' do %>
+                <%= image_tag 'r-1.png' %>
+              <% end %>
+            </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-xs-10 col-md-10 details">
+                  <ul>
+                    <li>Rails</li>
+                    <li>Custom JS</li>
+                    <li>Keen.io Analytics</li>
+                    <li><%= link_to 'Pivotal Tracker Specs', 'https://www.pivotaltracker.com/n/projects/1148198' %></li>
+                  </ul>
+                </div>
+                <div class="col-xs-2 col-md-2 links">
+                  <div class="link">
+                    <%= link_to (fa_icon 'globe'), 'http://ian-rantly.herokuapp.com' %>
+                  </div>
+                  <div class="link">
+                    <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/rantly' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

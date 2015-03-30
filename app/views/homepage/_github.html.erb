@@ -1,0 +1,25 @@
+<section class="github">
+  <div class="container-fluid">
+    <div class="row header-click">
+      <div class="col-md-8 col-md-offset-2 header">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            Github
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+          <%= @github.user.login %>
+          <%= @github.user.followers %> followers
+          <%= @github.user.following %> following
+          <%= @github.user.public_repos %> pub repos
+          joined on <%= @github.user.created_at %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
