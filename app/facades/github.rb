@@ -16,12 +16,18 @@ class Github
   def languages
     language_lists = repos.map { |repo| repo.rels[:languages].get.data }
     languages = {}
+    final = {percent: {}, lines: {}, bytes: {}}
 
     language_lists.each do |list|
       languages = languages.merge(list) { |k, old, new| old+new }
     end
     sums = languages.values.reduce(:+)
-    languages.each { |k, v| languages[k] = ((v/sums.to_f)*100).round(2) }
-    languages.to_a
+    languages.each do |k, v|
+      final[:lines][k] = v/30
+      final[:bytes][k] = v
+      languages[k] = ((v/sums.to_f)*100).round(2)
+    end
+    final[:percent] = languages.to_a
+    final.inspect
   end
 end

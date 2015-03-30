@@ -1,24 +1,22 @@
 $(document).ready(function () {
 
   function displayChart(languages) {
-    $('#loading').hide();
+    $('.loading').hide();
 
-    $("#graph").highcharts({chart: {backgroundColor: "transparent"}, title: {text: 'Code Languages'}, tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    }, series: [
-      {type: "pie", name: "Repos", data: languages, dataLabels: {enabled: !0}}
+    $("#graph").highcharts({credits: {enabled: !1}, chart: {backgroundColor: "transparent"}, title: {text: null}, tooltip: {formatter: function () {
+      var t = "\u25cf <strong>Repos:</strong> " + this.y + " (" + this.percentage.toFixed(1) + "%)";
+      return t
+    }}, series: [
+      {type: "pie", name: "Repos", data: languages.percent, dataLabels: {enabled: !0}}
     ]});
 
   }
 
-  $('.github').find('.header-clicker').on('click', function () {
-    $(this).disabled = true;
+  $('.github').find('.header-click').on('click', function () {
     var promise = $.getJSON('/chart.json');
     promise.success(displayChart)
   })
 });
-
-
 
 
 ////$(".repo-languages .chart").highcharts({credits: {enabled: !1}, chart: {backgroundColor: "transparent"}, title: {text: null}, tooltip: {formatter: function () {
