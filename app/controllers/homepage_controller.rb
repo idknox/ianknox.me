@@ -4,6 +4,6 @@ class HomepageController < ApplicationController
   end
 
   def github_chart
-    render json: eval(GitData.all.last.languages)
+    render json: Github.new('idknox').languages
   end
 end

@@ -30,6 +30,6 @@ class Github
     languages.each do |k, v|
       final << {name: k, y: v}
     end
-    final.inspect
+    final
   end
 end
