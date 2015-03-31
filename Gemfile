@@ -17,10 +17,11 @@ gem 'autoprefixer-rails'
 gem 'fancybox2-rails'
 gem 'highcharts-rails', '~> 4.1.4'
 gem 'octokit', '~> 3.0'
-
-gem 'rails_12factor', group: :production
 gem 'newrelic_rpm'
 gem 'font-awesome-rails'
+gem 'octicons-rails'
+
+gem 'rails_12factor', group: :production
 gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development do

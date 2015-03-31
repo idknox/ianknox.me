@@ -12,9 +12,12 @@
     <div class="row content">
       <div class="col-md-8 col-md-offset-2">
         <div class="row">
-          <div class="col-md-4 stats">
+          <div class="col-sm-12 col-md-6 stats">
             <div>
-              <b><%= @github.user.login %></b><br>
+
+              <b><%= link_to @github.user.login, @github.user.url %></b>
+            </div>
+            <div>
               <b><%= @github.user.followers %></b> followers ·
               <b><%= @github.user.following %></b> following
             </div>
@@ -23,11 +26,20 @@
               <b><%= @github.user.public_gists %></b> public gist
             </div>
             <div>
-              Joined Github on <%= formatted_date(@github.user.created_at) %>
-              <br></b1><b><%= link_to (fa_icon 'github'), 'http://www.github.com/idknox' %></b>
+              Joined Github <%= formatted_date(@github.user.created_at) %>
+            </div>
+            <div class="">
+              <h2>Recent Repos</h2>
+              <ul>
+                <% @github.recent_repos.each do |repo| %>
+                  <li><%= link_to repo.name, repo.url %></li>
+                <% end %>
+              </ul>
             </div>
           </div>
-          <div class="col-md-4 graph-language">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-6 graph-language">
+            <h3><span class="mega-octicon octicon-file-code"></span>Code Languages</h3>
+
             <div id="graph"></div>
           </div>
         </div>

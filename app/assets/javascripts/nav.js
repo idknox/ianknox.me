@@ -3,12 +3,12 @@ $(document).ready(function () {
   function openBox(el) {
     var menuHeight = $('.nav-custom').height();
 
-    el.find('.content').slideDown();
-    el.siblings('section').find('.content').slideUp()
 
     $('html,body').animate({
       scrollTop: el.offset().top - menuHeight
     }, 500);
+    el.find('.content').slideDown();
+    el.siblings('section').find('.content').slideUp()
   }
 
   function closeBox(el) {
@@ -24,17 +24,17 @@ $(document).ready(function () {
   });
 
   $('.github-button').on('click', function () {
-    openBox($('.github'))
+    openBox($('.github'));
   });
 
 // ACCORDION //
+  $('.content').hide();
 
   function isHidden(el) {
     var display = el.css('display');
     return (display === 'none')
   }
 
-  $('.content').hide();
 
   $('.header-click').click(function () {
 

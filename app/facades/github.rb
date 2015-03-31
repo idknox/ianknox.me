@@ -3,7 +3,8 @@ require 'octokit'
 class Github
 
   def initialize(user)
-    client = Octokit::Client.new(:access_token => ENV['GITHUB_ACCESS_TOKEN'])
+    Octokit.auto_paginate = true
+    client = Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
     @user = client.user user
   end
 
@@ -13,21 +14,22 @@ class Github
     @user.rels[:repos].get.data
   end
 
+  def recent_repos
+    repos.sort_by { |repo| repo.created_at }.reverse[0..4]
+  end
+
   def languages
     language_lists = repos.map { |repo| repo.rels[:languages].get.data }
     languages = {}
-    final = {percent: {}, lines: {}, bytes: {}}
+    final = []
 
     language_lists.each do |list|
       languages = languages.merge(list) { |k, old, new| old+new }
     end
-    sums = languages.values.reduce(:+)
+    sum = languages.values.reduce(:+)
     languages.each do |k, v|
-      final[:lines][k] = v/30
-      final[:bytes][k] = v
-      languages[k] = ((v/sums.to_f)*100).round(2)
+      final << {name: k, y: v}
     end
-    final[:percent] = languages.to_a
     final.inspect
   end
 end
