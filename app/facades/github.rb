@@ -4,18 +4,18 @@ class Github
 
   def initialize(user)
     Octokit.auto_paginate = true
-    client = Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
-    @user = client.user user
+    @client = Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
+    @user = @client.user user
   end
 
-  attr_reader :user, :repos, :language_lists
+  attr_reader :user, :client, :language_lists
 
   def repos
-    @user.rels[:repos].get.data
+    @client.repositories('idknox')
   end
 
   def recent_repos
-    repos.sort_by { |repo| repo.created_at }.reverse[0..4]
+    repos.sort_by { |repo| repo.created_at }.reverse.take(5)
   end
 
   def languages
@@ -30,6 +30,6 @@ class Github
     languages.each do |k, v|
       final << {name: k, y: v}
     end
-    final
+    final.inspect
   end
 end

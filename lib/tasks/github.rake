@@ -2,6 +2,8 @@ namespace :github do
   desc 'updates github languages'
   task lang: :environment do
     github = Github.new('idknox')
-    GitData.create!(languages: github.languages)
+    g_data = GitData.last
+    g_data.languages = github.languages
+    g_data.save
   end
 end

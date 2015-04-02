@@ -26,24 +26,19 @@
               <b><%= @github.user.public_gists %></b> public gist
             </div>
             <div>
-              Joined Github <%= formatted_date(@github.user.created_at) %>
+              Joined <%= formatted_date(@github.user.created_at) %>
             </div>
             <div class="">
               <h2>Recent Repos</h2>
               <ul>
                 <% @github.recent_repos.each do |repo| %>
-                  <li><%= link_to repo.name, repo.url %></li>
+                  <li><%= link_to repo.name, repo.html_url %></li>
                 <% end %>
               </ul>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-0 graph-language">
-            <h3><span class="mega-octicon octicon-file-code"></span>Code Languages</h3>
-
             <div id="graph"></div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-0 loading">
-            <%= fa_icon 'cog', class: 'fa-spin' %>
           </div>
         </div>
       </div>
