@@ -29,7 +29,7 @@
               Joined <%= formatted_date(@github.user.created_at) %>
             </div>
             <div class="">
-              <h2>Recently Updated Repos</h2>
+              <h2>Recent Repos</h2>
               <ul>
                 <% @github.recent_repos.each do |repo| %>
                   <li><%= link_to repo.name, repo.html_url %></li>

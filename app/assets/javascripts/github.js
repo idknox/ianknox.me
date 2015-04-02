@@ -6,7 +6,7 @@ $(document).ready(function () {
         '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'],
       credits: {enabled: !1},
       chart: {
-        backgroundColor: "transparent",
+        backgroundColor: "transparent"
       },
       title: {text: '<h3><span class="mega-octicon octicon-file-code"></span>Code Languages</h3>', useHTML: true},
       tooltip: {formatter: function () {

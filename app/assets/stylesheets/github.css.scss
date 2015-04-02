@@ -27,11 +27,6 @@
   }
 
   .graph-language {
-//    text-align: center;
-
-    @media (max-width: $phone) {
-      margin: 100px 200px 0 0;
-    }
   }
 
 
@@ -40,6 +35,6 @@
   }
 
   h3 {
-    margin: 0;
+    margin-right: 300px;
   }
 }
