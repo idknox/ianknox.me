@@ -15,7 +15,7 @@ class Github
   end
 
   def recent_repos
-    repos.sort_by { |repo| repo.created_at }.reverse.take(5)
+    repos.sort_by { |repo| repo.updated_at }.reverse.take(5)
   end
 
   def languages
