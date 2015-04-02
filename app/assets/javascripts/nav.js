@@ -4,10 +4,10 @@ $(document).ready(function () {
     var menuHeight = $('.nav-custom').height();
 
 
+    el.find('.content').slideDown();
     $('html,body').animate({
       scrollTop: el.offset().top - menuHeight
     }, 500);
-    el.find('.content').slideDown();
     el.siblings('section').find('.content').slideUp()
   }
 

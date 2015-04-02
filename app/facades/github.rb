@@ -21,15 +21,11 @@ class Github
   def languages
     language_lists = repos.map { |repo| repo.rels[:languages].get.data }
     languages = {}
-    final = []
 
     language_lists.each do |list|
       languages = languages.merge(list) { |k, old, new| old+new }
     end
-    sum = languages.values.reduce(:+)
-    languages.each do |k, v|
-      final << {name: k, y: v}
-    end
-    final.inspect
+
+    languages.map { |k, v| {name: k, y: v} }.inspect
   end
 end
