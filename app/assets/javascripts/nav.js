@@ -3,17 +3,16 @@ $(document).ready(function () {
   function openBox(el) {
     var menuHeight = $('.nav-custom').height();
 
-
+    el.siblings('section').find('.content').hide()
     el.find('.content').slideDown();
+
     $('html,body').animate({
       scrollTop: el.offset().top - menuHeight
     }, 500);
-    el.siblings('section').find('.content').slideUp()
   }
 
   function closeBox(el) {
     el.find('.content').slideUp();
-    el.siblings('section').find('.content').slideDown()
   }
 
 
@@ -39,9 +38,9 @@ $(document).ready(function () {
   $('.header-click').click(function () {
 
     if (isHidden($(this).siblings('.content'))) {
-      openBox($(this).parent())
+      openBox($(this).parents('section'))
     } else {
-      closeBox($(this).parent())
+      closeBox($(this).parents('section'))
     }
 
   });
