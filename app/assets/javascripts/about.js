@@ -11,6 +11,7 @@ $(document).ready(function () {
       center: center,
       zoom: 6,
       disableDefaultUI: true,
+      scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
