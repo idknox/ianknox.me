@@ -6,11 +6,17 @@ $(document).ready(function () {
         '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'],
       credits: {enabled: !1},
       chart: {
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
+        marginLeft: -130
       },
-      title: {text: '<h3><span class="mega-octicon octicon-file-code"></span>Code Languages</h3>', useHTML: true},
+      title: {
+        text: '<h3 class="graph-title"><span class="mega-octicon octicon-file-code"></span>Code Languages</h3>',
+        useHTML: true,
+        align: 'left',
+        x: 50
+      },
       tooltip: {formatter: function () {
-        return "\u25cf <strong>Characters:</strong> " + this.y + "<br>\u25cf <strong>Lines:</strong> " + (this.y / 30).toFixed(0);
+        return this.key + "<br>\u25cf <strong>Characters:</strong> " + this.y + "<br>\u25cf <strong>Lines:</strong> " + (this.y / 30).toFixed(0);
       }},
       plotOptions: {
         pie: {
@@ -32,6 +38,6 @@ $(document).ready(function () {
   }
 
 
-    var promise = $.getJSON('/chart.json');
-    promise.success(displayChart)
+  var promise = $.getJSON('/chart.json');
+  promise.success(displayChart)
 });

@@ -8,19 +8,23 @@ $(document).ready(function () {
       },
       {
         'href': '/assets/sl-2.png',
-        'title': 'Events Map'
+        'title': 'Events Detail'
       },
       {
         'href': '/assets/sl-3.png',
-        'title': 'Venues List'
+        'title': 'Venues'
       },
       {
         'href': '/assets/sl-4.png',
-        'title': 'Venues Map'
+        'title': 'Venue Events'
       },
       {
         'href': '/assets/sl-5.png',
-        'title': 'Venue Detail'
+        'title': 'Venue Map'
+      },
+      {
+        'href': '/assets/sl-5.png',
+        'title': 'Events Map'
       }
     ], {
       'titlePosition': 'inside',
