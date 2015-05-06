@@ -49,7 +49,7 @@
             <h3>Twitter-like App</h3>
 
             <div class="site">
-              <%= link_to '#', class: 'r-gallery' do %>
+              <%= link_to '#', id: 'r-gallery' do %>
                 <%= image_tag 'r-1.png' %>
               <% end %>
             </div>
@@ -74,6 +74,38 @@
               </div>
             </div>
           </div>
+          <div class="col-md-5 project">
+            <h1 class="project-title">Nile Travel App</h1>
+
+            <h3 class="project-subtitle">Landing Page</h3>
+
+            <div class="site">
+              <%= link_to '#', id: 'nile-gallery' do %>
+                <%= image_tag 'nile-1.png' %>
+              <% end %>
+            </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-xs-10 col-md-10 details">
+                  <ul>
+                    <li>Rails</li>
+                    <li>Custom JS, SASS</li>
+                    <li>Signup and responsive mailers</li>
+                    <li>&nbsp;</li>
+                  </ul>
+                </div>
+                <div class="col-xs-2 col-md-2 links">
+                  <div class="link">
+                    <%= link_to (fa_icon 'globe'), 'http://niletravelapp.com' %>
+                  </div>
+                  <div class="link">
+                    <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/nile' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

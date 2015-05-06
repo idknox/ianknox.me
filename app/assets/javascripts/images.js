@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
   });
 
-  $(".r-gallery").click(function () {
+  $("#r-gallery").click(function () {
     $.fancybox([
       {
         'href': '/assets/r-1.png',
@@ -50,6 +50,26 @@ $(document).ready(function () {
       {
         'href': '/assets/r-3.png',
         'title': 'Follow Users'
+      }
+    ], {
+      'titlePosition': 'inside',
+      'overlayOpacity': 0.3
+    });
+  });
+
+  $("#nile-gallery").click(function () {
+    $.fancybox([
+      {
+        'href': '/assets/nile-1.png',
+        'title': 'Hero'
+      },
+      {
+        'href': '/assets/nile-2.png',
+        'title': 'Team'
+      },
+      {
+        'href': '/assets/nile-3.png',
+        'title': 'Footer/Signup'
       }
     ], {
       'titlePosition': 'inside',

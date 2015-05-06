@@ -25,6 +25,5 @@ gem 'rails_12factor', group: :production
 gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development do
-  gem 'capistrano-rails', '~> 1.1.1'
   gem 'spring'
 end
