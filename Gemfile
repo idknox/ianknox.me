@@ -1,14 +1,12 @@
 source 'http://rubygems.org'
 
-ruby '2.1.0'
+ruby '2.2.2'
 
 gem 'rails', '4.1.5'
 gem 'pg'
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_stdout_logging'
 gem 'rails_serve_static_assets'
 
@@ -23,9 +21,5 @@ gem 'newrelic_rpm'
 gem 'font-awesome-rails'
 gem 'octicons-rails'
 
-gem 'rails_12factor', group: :production
 gem 'dotenv-rails', :groups => [:development, :test]
 
-group :development do
-  gem 'spring'
-end
