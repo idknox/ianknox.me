@@ -1,0 +1,31 @@
+<div class="col-md-5 col-md-offset-2 project">
+  <h1 class="project-title">Rantly</h1>
+
+  <h3>Twitter-like App</h3>
+
+  <div class="site">
+    <%= link_to '#', id: 'r-gallery' do %>
+      <%= image_tag 'r-1.png' %>
+    <% end %>
+  </div>
+  <div class="detail">
+    <div class="row">
+      <div class="col-xs-10 col-md-10 details">
+        <ul>
+          <li>Rails</li>
+          <li>Custom JS, SASS, Flexbox</li>
+          <li>Keen.io analytics</li>
+          <li><%= link_to 'Pivotal Tracker Specs', 'https://www.pivotaltracker.com/n/projects/1148198', target: '_blank' %></li>
+        </ul>
+      </div>
+      <div class="col-xs-2 col-md-2 links">
+        <div class="link">
+          <%= link_to (fa_icon 'link'), 'http://ian-rantly.herokuapp.com', target: '_blank' %>
+        </div>
+        <div class="link">
+          <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/rantly', target: '_blank' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

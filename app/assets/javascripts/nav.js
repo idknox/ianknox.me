@@ -16,6 +16,10 @@ $(document).ready(function () {
   }
 
 
+  $('nav a').on('click', function(){
+    $('.navbar-toggle').click()
+  });
+
   // SCROLL //
 
   $('.projects-button').on('click', function () {

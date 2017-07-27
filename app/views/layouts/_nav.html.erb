@@ -1,36 +1,48 @@
 <nav class="navbar navbar-default nav-custom">
   <div class="container-fluid">
     <div class="row">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="col-xs-8 col-sm-8 col-sm-offset-3 col-md-8 col-md-offset-2 menu">
+      <div class="menu col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li>
-              <%= link_to (fa_icon 'book'), '#', class: 'projects-button' %>
+              <%= link_to (fa_icon 'book'), 'javascript:void(0)', class: 'projects-button' %>
+              <div class="popover">Work</div>
             </li>
             <li>
-              <%= link_to (fa_icon 'github'), '#', class: 'github-button' %>
+              <%= link_to (fa_icon 'github'), 'javascript:void(0)', class: 'github-button' %>
+              <div class="popover">Github</div>
             </li>
             <li>
-              <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox' %>
+              <%= link_to (fa_icon 'twitter'), 'http://www.twitter.com/idknox', target: '_blank' %>
+              <div class="popover">Twitter</div>
             </li>
             <li>
-              <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H' %>
+              <%= link_to (fa_icon 'linkedin'), 'http://lnkd.in/DiAN7H', target: '_blank' %>
+              <div class="popover">LinkedIn</div>
             </li>
             <li>
               <%= link_to (fa_icon 'envelope'), 'mailto:knoxid@gmail.com' %>
+              <div class="popover">Contact</div>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  <!--<div class="heartbeat">-->
+    <!--<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"-->
+         <!--viewBox="-466.4 259.6 280.2 47.3" enable-background="new -466.4 259.6 280.2 47.3" xml:space="preserve">-->
+      <!--<polyline fill="none" stroke="#333333" class="ekg" stroke-width=".5" stroke-linecap="square" stroke-miterlimit="10" points="-465.4,281-->
+	<!-- -426.9,281 -418.9,281 -423.9,281 -223.2,281 -222.9,280 -222.1,285 -221.3,277 -220.5,282 -220.2,281-->
+	<!-- -100.2,281 0,281 "/>-->
+    <!--</svg>-->
+  <!--</div>-->
 </nav>

@@ -1,0 +1,31 @@
+<div class="col-md-5 col-md-offset-2 project">
+  <h1 class="project-title">Nile Travel App</h1>
+
+  <h3 class="project-subtitle">Marketing Page</h3>
+
+  <div class="site">
+    <%= link_to '#', id: 'nile-gallery' do %>
+      <%= image_tag 'nile-1.png' %>
+    <% end %>
+  </div>
+  <div class="detail">
+    <div class="row">
+      <div class="col-xs-10 col-md-10 details">
+        <ul>
+          <li>Rails 4</li>
+          <li>Custom JS, Flexbox, SASS</li>
+          <li>Custom CSS Animations</li>
+          <li>Signup and responsive mailers</li>
+        </ul>
+      </div>
+      <div class="col-xs-2 col-md-2 links">
+        <div class="link">
+          <%= link_to (fa_icon 'link'), 'http://nile-splash.herokuapp.com/', target: '_blank' %>
+        </div>
+        <div class="link">
+          <%= link_to (fa_icon 'github'), 'http://www.github.com/idknox/nile', target: '_blank' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.3.0'
 
 gem 'rails', '4.1.5'
 gem 'pg'
@@ -10,6 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'rails_stdout_logging'
 gem 'rails_serve_static_assets'
 
+gem 'haml-rails', '~> 0.9'
 gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
