@@ -5,6 +5,10 @@ i, a {
 .header-click {
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   .header {
     font-size: 5em;
     padding: 10px 0 10px 0;
