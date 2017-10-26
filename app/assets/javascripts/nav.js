@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  setInterval(function() {
+    $.get('http://iknox.herokuapp.com');
+  }, 300000);
 
   function openBox(el) {
     var menuHeight = $('.nav-custom').height();
