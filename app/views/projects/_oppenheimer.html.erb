@@ -3,16 +3,15 @@
 
   <h3 class="project-subtitle">Ultra High Net Worth Rebuild</h3>
 
-  <div class="site">
-    <%= link_to '#', id: 'op-gallery' do %>
-      <%= image_tag 'op-1.png' %>
-    <% end %>
-  </div>
+  <%= link_to '#', id: 'op-gallery' do %>
+      <div class="site" style="background-image: url(<%= asset_path 'op-1.png' %>)">
+      </div>
+  <% end %>
   <div class="detail">
     <div class="row">
       <div class="col-xs-10 col-md-10 details">
         <ul>
-          <li>Rails 3 & 4, Custom JS </li>
+          <li>Rails 3 & 4, Custom JS</li>
           <li>Custom Rails CMS</li>
           <li>Cross-domain login</li>
           <li>Helped launch 3 six-month projects</li>

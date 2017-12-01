@@ -3,11 +3,10 @@
 
   <h3 class="project-subtitle">Marketing Page</h3>
 
-  <div class="site">
-    <%= link_to '#', id: 'nile-gallery' do %>
-      <%= image_tag 'nile-1.png' %>
-    <% end %>
-  </div>
+  <%= link_to '#', id: 'nile-gallery' do %>
+      <div class="site" style="background-image: url(<%=  asset_path 'nile-1.png' %>)">
+      </div>
+  <% end %>
   <div class="detail">
     <div class="row">
       <div class="col-xs-10 col-md-10 details">

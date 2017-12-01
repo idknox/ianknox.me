@@ -3,11 +3,10 @@
 
   <h3 class="project-subtitle">Doctor Messaging Platform</h3>
 
-  <div class="site">
-    <%= link_to '#', id: 'cirrus-gallery' do %>
-      <%= image_tag 'cirrus-1.png' %>
-    <% end %>
-  </div>
+  <%= link_to '#', id: 'cirrus-gallery' do %>
+      <div class="site" style="background-image: url(<%= asset_path 'cirrus-1.png'  %>)">
+      </div>
+  <% end %>
   <div class="detail">
     <div class="row">
       <div class="col-xs-10 col-md-10 details">

@@ -3,11 +3,10 @@
 
   <h3 class="project-subtitle">Denver Concert Aggregator</h3>
 
-  <div class="site">
-    <%= link_to '#', id: 'sl-gallery' do %>
-      <%= image_tag 'sl-1.png' %>
-    <% end %>
-  </div>
+  <%= link_to '#', id: 'sl-gallery' do %>
+      <div class="site" style="background-image: url(<%= asset_path 'sl-1.png'  %>)">
+      </div>
+  <% end %>
   <div class="detail">
     <div class="row">
       <div class="col-xs-10 col-md-10 details">

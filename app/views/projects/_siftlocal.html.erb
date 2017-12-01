@@ -3,11 +3,11 @@
 
   <h3 class="project-subtitle">Makers/Product Showcase</h3>
 
-  <div class="site">
-    <%= link_to '#', id: 'sift-gallery' do %>
-      <%= image_tag 'sift-1.png' %>
-    <% end %>
-  </div>
+  <%= link_to '#', id: 'sift-gallery' do %>
+      <div class="site" style="background-image: url(<%=  asset_path 'sift-1.png' %>)">
+        <%= image_tag '' %>
+      </div>
+  <% end %>
   <div class="detail">
     <div class="row">
       <div class="col-xs-10 col-md-10 details">
